@@ -1,0 +1,9 @@
+core = 7.x
+name = Commons Utility links block
+package = "Commons - Building blocks"
+
+; Information added by drush on 2012-12-15
+version = ""
+project = "commons_utility_links"
+datestamp = "1355534824"
+

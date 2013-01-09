@@ -1,0 +1,18 @@
+core = 7.x
+name = Commons Tabbed Browsing Widget
+package = "Commons - Building blocks"
+dependencies[] = quicktabs
+dependencies[] = quicktabs_tabstyles
+
+; Information added by drush on 2012-11-21
+version = ""
+project = "commons_bw"
+datestamp = "1353557792"
+
+
+
+; Information added by drush on 2012-12-15
+version = ""
+project = "commons_bw"
+datestamp = "1355534846"
+

@@ -1,0 +1,11 @@
+name = Edit profile
+description = Creates separate "Edit account" and "Edit profile" tabs for each user, with custom user fields configured under "Edit profile."
+core = 7.x
+
+
+; Information added by drush on 2012-12-15
+version = "7.x-1.0-beta2+0-dev"
+core = "7.x"
+project = "edit_profile"
+datestamp = "1355534869"
+
