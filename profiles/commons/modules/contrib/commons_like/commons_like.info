@@ -14,9 +14,3 @@ features[features_api][] = api:1
 features[field_instance][] = message-commons_like_user_likes_node-field_target_nodes
 features[message_type][] = commons_like_user_likes_node
 features[variable][] = rate_widgets
-
-; Information added by drush on 2012-12-15
-version = ""
-project = "commons_like"
-datestamp = "1355534827"
-
