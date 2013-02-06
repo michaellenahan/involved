@@ -81,16 +81,15 @@ h1 {
 
 
 h2 {
-  color: $dark_blue;
+  color: $orange;
   font-weight: lighter;
   font-size: 54px;
   line-height: 54px;
-  font-family: $alt-font;
+  text-transform: uppercase;
 }
 
-
 h3 {
-  color: $light_blue;
+  color: $orange;
   font-weight: normal;
   font-size: 20px;
   line-height: 20px;
@@ -191,7 +190,7 @@ var {
  * Main wrapper in page.tpl.php, the .container class sets the width of the page, do not add width to it!
  */
 #page  {
-  margin-top: -92px;
+  margin-top: -102px;
   .container {}
 }
 
@@ -202,16 +201,13 @@ var {
 #header {
   height: 95px;
   color: $white;
-  
-  a {
-    color: $white;
-  }
+
 }
 
 .header-color-row-one {
-  height: 64px;
-  background-color: $dark_blue;
-  border-top: 4px solid darken($dark_blue, 50%);
+  height: 74px;
+  background-color: $light_gray;
+  border-top: 4px solid darken($light_gray, 50%);
 
   .boxshadow & {
     @include box-shadow($dark_blue 0px -1px 0px);
@@ -220,10 +216,10 @@ var {
 }
 
 .header-color-row-two {
-  background-color: $light_blue;
+  background-color: $white;
   height: 26px;
-  border-top: 1px solid lighten($light_blue, 10%);
-  border-bottom: 1px solid darken($light_blue, 10%);
+  border-top: 1px solid lighten($light_gray, 10%);
+  border-bottom: 1px solid darken($light_gray, 10%);
 }
 
 
@@ -376,7 +372,7 @@ var {
  */
 #logo {
   display: inline-block;
-  padding: 0 10px 0 0;
+  padding: 6px 10px 0 0;
 
   img {
     vertical-align: bottom;
@@ -1048,7 +1044,7 @@ h1.node-title {
 
 a {
   text-decoration: none;
-  color: $light_blue;
+  color: $light_orange;
 
   &:link,
   &:visited {}
@@ -1101,7 +1097,7 @@ a {
     padding: 0;
 
     &:hover, &.active-trail {
-      background: image-url('main-nav-hover.png') repeat-x left top;
+      /* background: image-url('main-nav-hover.png') repeat-x left top; */
       .arrow {
         background:image-url('main-nav-arrow.png');
       }
@@ -1111,11 +1107,10 @@ a {
   ul.menu li a {
     display: block;
     white-space: nowrap;
-    padding: 31px 13px 0px 13px;
-    height: 33px;
+    padding: 45px 13px 0px 13px;
+    height: 28px;
     text-transform: uppercase;
-    @include text-shadow(#000 1px 1px 4px);
-    background-position:center 10px;
+    background-position:center 6px;
     background-repeat:no-repeat;
     position:relative;
     @extend %divider-left;
@@ -1123,6 +1118,9 @@ a {
     &:hover,
     &:focus {
       text-decoration: none;
+    }
+    &.active {
+      color: $light_orange;
     }
     .arrow {
       width:17px;
@@ -1139,15 +1137,27 @@ a {
   }
 
   .main-menu-home a {
-    background: image-url('icons/icon-home.png') no-repeat center 10px;
+    background: image-url('icons/mil-icon-home-inactive.png') no-repeat center 6px;
+
+      &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-home.png') no-repeat center 6px;
+      }
   }
 
   .main-menu-groups a {
-    background: image-url('icons/icon-groups.png') no-repeat center 10px;
+    background: image-url('icons/mil-icon-groups-inactive.png') no-repeat center 6px;
+
+      &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-groups.png') no-repeat center 6px;
+      }
   }
 
   .main-menu-events a {
-    background: image-url('icons/icon-events.png') no-repeat center 10px;
+    background: image-url('icons/mil-icon-events-inactive.png') no-repeat center 6px;
+
+    &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-events.png') no-repeat center 6px;
+      }
   }
 }
 
@@ -2644,11 +2654,11 @@ ul.action-links {
 .block-search {
   display:block;
   // needs latest Compass, add '@import "compass"' to your scss
-  background-color: #03416a; // Old browsers
-  @include filter-gradient(#03416a, #00558b, vertical); // IE6-9
-  @include background-image(linear-gradient(top,  #03416a 0%,#034b7b 19%,#034d7e 27%,#00558b 100%));
+  background-color: #F37C30; // Old browsers
+  @include filter-gradient(#F37C30, #C3443D, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #C3443D 0%,#F37C30 19%,#E09127 27%,#F8A02B 100%));
   @include border-radius(4px);
-  box-shadow: 1px 1px 2px #000 inset, 2px 3px 3px rgba(#fff, 0.09);
+  box-shadow: 1px 1px 2px #F37C30 inset, 2px 3px 3px rgba(#fff, 0.09);
   // width:100%;
   height:30px;
   margin:0 0 0 10px;
@@ -3151,7 +3161,7 @@ form.commons-events-form-float {
 }
 
 #content-column #edit-submit {
-  @extend %btn-green;
+  @extend %btn-orange;
   margin:0 15px 0 0;
   padding: 5px 20px;
 }
@@ -3570,3 +3580,15 @@ body.front.logged-in {
     background-image:image-url('icons/icon-events.png');
   }
 }
+
+/* =============================================================================
+ *   Quicktab Pills
+ * ========================================================================== */
+
+ .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a {
+    background-color: $orange;
+ }
+
+ .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a::after {
+    border-color: $orange transparent transparent transparent;
+ }
