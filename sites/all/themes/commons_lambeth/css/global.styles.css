@@ -3257,3 +3257,13 @@ body.front.logged-in .views-exposed-widgets {
 .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a::after {
   border-color: #f37c30 transparent transparent transparent;
 }
+
+/* line 3604, ../sass/global.styles.scss */
+body.front.not-logged-in #block-system-main .pane-1 {
+  width: 50%;
+}
+
+/* line 3608, ../sass/global.styles.scss */
+body.front.not-logged-in #block-system-main .pane-2 {
+  width: 50%;
+}

@@ -1144,7 +1144,7 @@ a {
       }
   }
 
-  .main-menu-groups a {
+  .main-menu-projects a {
     background: image-url('icons/mil-icon-groups-inactive.png') no-repeat center 6px;
 
       &:hover, &.active-trail {
@@ -3600,3 +3600,11 @@ body.front.logged-in {
  .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a::after {
     border-color: $orange transparent transparent transparent;
  }
+
+ body.front.not-logged-in #block-system-main .pane-1 {
+  width: 50%;
+}
+
+body.front.not-logged-in #block-system-main .pane-2 {
+  width: 50%;
+}
