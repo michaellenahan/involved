@@ -516,7 +516,7 @@ var {
  */
 /* line 489, ../sass/global.styles.scss */
 .more-link {
-  background-image: url('../images/icons/icon-more.png?1360145209');
+  background-image: url('../images/icons/icon-more.png?1360758392');
   background-repeat: no-repeat;
   height: 14px;
   padding: 0 0 0 17px;
@@ -617,7 +617,7 @@ h1.node-title a:hover {
   position: absolute;
   right: -5px;
   top: 10px;
-  background: url('../images/user_img_arrow.png?1360145209');
+  background: url('../images/user_img_arrow.png?1360758392');
 }
 /* line 580, ../sass/global.styles.scss */
 .view-commons-homepage-content .user-picture img, .view-commons-activity-streams-activity .user-picture img, .view-activity-group .user-picture img, .view-commons-activity-streams-user-activity .user-picture img {
@@ -662,7 +662,7 @@ h1.node-title a:hover {
   position: absolute;
   right: -5px;
   top: 10px;
-  background: url('../images/user_img_arrow.png?1360145209');
+  background: url('../images/user_img_arrow.png?1360758392');
 }
 /* line 624, ../sass/global.styles.scss */
 .view-commons-bw-all .user-picture img, #comments .user-picture img {
@@ -699,7 +699,7 @@ h1.node-title a:hover {
   position: absolute;
   right: -5px;
   top: 10px;
-  background: url('../images/user_img_arrow.png?1360145209');
+  background: url('../images/user_img_arrow.png?1360758392');
 }
 /* line 659, ../sass/global.styles.scss */
 .page-node .node-content .user-picture img {
@@ -812,7 +812,7 @@ h1.node-title a:hover {
   position: absolute;
   right: -5px;
   top: 10px;
-  background: url('../images/user_img_arrow.png?1360145209');
+  background: url('../images/user_img_arrow.png?1360758392');
 }
 /* line 751, ../sass/global.styles.scss */
 .page-node #comments .user-picture img {
@@ -947,7 +947,7 @@ h1.node-title a:hover {
   width: 58px;
   height: 22px;
   display: inline-block;
-  background-image: url('../images/tag-featured.png?1360145209');
+  background-image: url('../images/tag-featured.png?1360758392');
   background-repeat: no-repeat;
   margin: 6px 0 0 5px;
 }
@@ -957,7 +957,7 @@ h1.node-title a:hover {
   width: 27px;
   height: 22px;
   display: inline-block;
-  background-image: url('../images/tag-new.png?1360145209');
+  background-image: url('../images/tag-new.png?1360758392');
   background-repeat: no-repeat;
   margin: 4px 0 0 5px;
 }
@@ -1054,7 +1054,7 @@ h1.node-title a:hover {
 .region-header {
   float: left;
   height: 64px;
-  width: 270px;
+  width: 260px;
 }
 
 /*
@@ -1143,7 +1143,7 @@ a:hover, a:focus {
 #menu-bar.nav li:hover .arrow, #menu-bar.nav li.active-trail .arrow,
 #menu-bar.nav ul.menu li:hover .arrow,
 #menu-bar.nav ul.menu li.active-trail .arrow {
-  background: url('../images/main-nav-arrow.png?1360157335');
+  background: url('../images/main-nav-arrow.png?1360758392');
 }
 /* line 1107, ../sass/global.styles.scss */
 #menu-bar.nav li a,
@@ -1184,27 +1184,27 @@ a:hover, a:focus {
 }
 /* line 1139, ../sass/global.styles.scss */
 #menu-bar.nav .main-menu-home a {
-  background: url('../images/icons/mil-icon-home-inactive.png?1360169347') no-repeat center 6px;
+  background: url('../images/icons/mil-icon-home-inactive.png?1360758392') no-repeat center 6px;
 }
 /* line 1142, ../sass/global.styles.scss */
 #menu-bar.nav .main-menu-home a:hover, #menu-bar.nav .main-menu-home a.active-trail {
-  background: url('../images/icons/mil-icon-home.png?1360167994') no-repeat center 6px;
+  background: url('../images/icons/mil-icon-home.png?1360758392') no-repeat center 6px;
 }
 /* line 1147, ../sass/global.styles.scss */
 #menu-bar.nav .main-menu-groups a {
-  background: url('../images/icons/mil-icon-groups-inactive.png?1360169316') no-repeat center 6px;
+  background: url('../images/icons/mil-icon-groups-inactive.png?1360758392') no-repeat center 6px;
 }
 /* line 1150, ../sass/global.styles.scss */
 #menu-bar.nav .main-menu-groups a:hover, #menu-bar.nav .main-menu-groups a.active-trail {
-  background: url('../images/icons/mil-icon-groups.png?1360167809') no-repeat center 6px;
+  background: url('../images/icons/mil-icon-groups.png?1360758392') no-repeat center 6px;
 }
 /* line 1155, ../sass/global.styles.scss */
 #menu-bar.nav .main-menu-events a {
-  background: url('../images/icons/mil-icon-events-inactive.png?1360169329') no-repeat center 6px;
+  background: url('../images/icons/mil-icon-events-inactive.png?1360758392') no-repeat center 6px;
 }
 /* line 1158, ../sass/global.styles.scss */
 #menu-bar.nav .main-menu-events a:hover, #menu-bar.nav .main-menu-events a.active-trail {
-  background: url('../images/icons/mil-icon-events.png?1360167367') no-repeat center 6px;
+  background: url('../images/icons/mil-icon-events.png?1360758392') no-repeat center 6px;
 }
 
 /* line 1164, ../sass/global.styles.scss */
@@ -1912,7 +1912,7 @@ ul.action-links {
 }
 /* line 2044, ../sass/global.styles.scss */
 .view-id-commons_events_upcoming .views-field-title {
-  background-image: url('../images/icons/icon-gray-event.png?1360145209');
+  background-image: url('../images/icons/icon-gray-event.png?1360758392');
   background-repeat: no-repeat;
   background-position: left 4px;
   margin: 0;
@@ -2184,13 +2184,13 @@ ul.action-links {
 }
 /* line 2315, ../sass/global.styles.scss */
 .view-id-commons_featured .type-Event {
-  background-image: url('../images/icons/icon-gray-event.png?1360145209');
+  background-image: url('../images/icons/icon-gray-event.png?1360758392');
   background-position: left 1px;
   padding: 0 0 0 18px;
 }
 /* line 2320, ../sass/global.styles.scss */
 .view-id-commons_featured .type-Post {
-  background-image: url('../images/icons/icon-gray-post.png?1360145209');
+  background-image: url('../images/icons/icon-gray-post.png?1360758392');
   background-position: left 1px;
   padding: 0 0 0 18px;
 }
@@ -2536,7 +2536,7 @@ ul.action-links {
   border: none !important;
   width: 12px !important;
   height: 12px !important;
-  background-image: url('../images/icons/ico_search_wht.png?1360145209') !important;
+  background-image: url('../images/icons/ico_search_wht.png?1360758392') !important;
   text-indent: -9999px !important;
   padding: 0 !important;
   margin: 10px 2px !important;
@@ -2635,7 +2635,7 @@ ul.action-links {
 }
 /* line 2827, ../sass/global.styles.scss */
 .node.node-promoted {
-  background-image: url('../images/node-promoted-star.png?1360145209');
+  background-image: url('../images/node-promoted-star.png?1360758392');
   background-position: top right;
   background-repeat: no-repeat;
   position: relative;
@@ -3226,15 +3226,15 @@ body.front.logged-in .views-exposed-widgets {
  */
 /* line 3573, ../sass/global.styles.scss */
 #menu-bar.nav .menu-item-193 a {
-  background-image: url('../images/icons/icon-home.png?1360145209');
+  background-image: url('../images/icons/icon-home.png?1360758392');
 }
 /* line 3576, ../sass/global.styles.scss */
 #menu-bar.nav .menu-item-194 a {
-  background-image: url('../images/icons/icon-groups.png?1360145209');
+  background-image: url('../images/icons/icon-groups.png?1360758392');
 }
 /* line 3579, ../sass/global.styles.scss */
 #menu-bar.nav .menu-item-195 a {
-  background-image: url('../images/icons/icon-events.png?1360145209');
+  background-image: url('../images/icons/icon-events.png?1360758392');
 }
 
 /* =============================================================================
