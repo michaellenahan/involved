@@ -1191,11 +1191,11 @@ a:hover, a:focus {
   background: url('../images/icons/mil-icon-home.png?1360758392') no-repeat center 6px;
 }
 /* line 1147, ../sass/global.styles.scss */
-#menu-bar.nav .main-menu-groups a {
+#menu-bar.nav .main-menu-projects a {
   background: url('../images/icons/mil-icon-groups-inactive.png?1360758392') no-repeat center 6px;
 }
 /* line 1150, ../sass/global.styles.scss */
-#menu-bar.nav .main-menu-groups a:hover, #menu-bar.nav .main-menu-groups a.active-trail {
+#menu-bar.nav .main-menu-projects a:hover, #menu-bar.nav .main-menu-projects a.active-trail {
   background: url('../images/icons/mil-icon-groups.png?1360758392') no-repeat center 6px;
 }
 /* line 1155, ../sass/global.styles.scss */
