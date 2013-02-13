@@ -1,0 +1,323 @@
+@import "base";
+
+/*
+ * H1 Node title
+ */
+
+#page-title {
+	margin-bottom: 10px;
+}
+
+h1.node-title {
+  color:$orange;
+  font-size:20px;
+  a {
+    text-decoration:none;
+    color:$orange;
+    &:hover {
+      text-decoration:underline;
+    }
+  }
+}
+
+h2 {
+  color: $orange;
+  text-transform: uppercase;
+}
+
+html {
+  background:$page;
+}
+
+body {
+  font-size: 87.5%;
+  color: $dark_gray;
+}
+
+/*
+ * Wraps all header elements - branding and .region-header
+ */
+#header {
+  height: 95px;
+  color: $white;
+
+}
+
+.header-color-row-one {
+  height: 74px;
+  background-color: $light_gray;
+  border-top: 4px solid darken($light_gray, 50%);
+
+  .boxshadow & {
+    @include box-shadow($dark_gray 0px -1px 0px);
+    margin-top: 1px;
+  }
+}
+
+.header-color-row-two {
+  background-color: $white;
+  height: 26px;
+  border-top: 1px solid lighten($light_gray, 10%);
+  border-bottom: 1px solid darken($light_gray, 10%);
+}
+
+/* =============================================================================
+ *   Branding
+ * ========================================================================== */
+
+/*
+ * Wraps all the branding elements, logo, name and slogan
+ */
+#branding {
+  // display: inline-block;
+  float: left;
+  vertical-align: top;
+  width: 300px;
+}
+
+
+/*
+ * Logo
+ */
+#logo {
+  display: inline-block;
+  padding: 6px 10px 0 0;
+
+  img {
+    vertical-align: bottom;
+  }
+}
+
+/*
+ * Header region, embedded in the #header
+ */
+.region-header {
+  // display: inline-block;
+  float: left;
+  height: 64px;
+  width: 270px;
+}
+
+/* =============================================================================
+ *   Links
+ * ========================================================================== */
+
+a {
+  text-decoration: none;
+  color: $light_orange;
+
+  &:link,
+  &:visited {}
+
+  &:active,
+  &.active {}
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+/* =============================================================================
+ *   Primary, Secondary and Menu Bar region menus
+ * ========================================================================== */
+
+#primary-menu-bar {
+  display: inline-block;
+}
+
+/*
+ * Use one of the following id's for granular control:
+ *  - #menu-bar (menu bar region)
+ *  - #primary-menu (main menu)
+ *  - #secondary-menu (secondary/user menu)
+ * You can target all of these with .nav or div[id$="menu-bar"]
+ */
+
+#menu-bar.nav {
+  // display: inline-block;
+  // margin-right: -3px;
+  float: left;
+  vertical-align: top;
+  margin:0;
+
+  ul,
+  ul.menu {
+    margin: 0;
+    padding: 0;
+  }
+
+  li,
+  ul.menu li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover, &.active-trail {
+      /* background: image-url('main-nav-hover.png') repeat-x left top; */
+      .arrow {
+        background:image-url('main-nav-arrow.png');
+      }
+    }
+  }
+  li a,
+  ul.menu li a {
+    display: block;
+    white-space: nowrap;
+    padding: 45px 13px 0px 13px;
+    height: 28px;
+    text-transform: uppercase;
+    background-position:center 6px;
+    background-repeat:no-repeat;
+    position:relative;
+    &:visited {}
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &.active {
+      color: $light_orange;
+    }
+    .arrow {
+      width:17px;
+      height:9px;
+      position:absolute;
+      left:50%;
+      bottom:-1px;
+      margin:0 0 0 -8px;
+    }
+  }
+
+  .block {
+    margin: 0;
+  }
+
+  .main-menu-home a {
+    background: image-url('icons/mil-icon-home-inactive.png') no-repeat center 6px;
+
+      &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-home.png') no-repeat center 6px;
+      }
+  }
+
+  .main-menu-projects a {
+    background: image-url('icons/mil-icon-groups-inactive.png') no-repeat center 6px;
+
+      &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-groups.png') no-repeat center 6px;
+      }
+  }
+
+  .main-menu-events a {
+    background: image-url('icons/mil-icon-events-inactive.png') no-repeat center 6px;
+
+    &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-events.png') no-repeat center 6px;
+      }
+  }
+
+  .main-menu-impact a {
+    background: image-url('icons/mil-icon-events-inactive.png') no-repeat center 6px;
+
+    &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-events.png') no-repeat center 6px;
+      }
+  }
+}
+
+.selectBox-dropdown {
+	color: $orange;
+}
+
+/* =============================================================================
+ *   Quicktab Pills
+ * ========================================================================== */
+
+ .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a {
+    background-color: $orange;
+ }
+
+ .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a::after {
+    border-color: $orange transparent transparent transparent;
+ }
+
+ul.primary.tabs li.active a, ul.primary.tabs li.active a:hover {
+  background-color: $orange;
+}
+
+ul.primary.tabs li a:hover {
+  background-color: $orange;
+  color: #FFF;
+}
+
+/*
+ * "Search form" block
+ */
+.block-search {
+  display:block;
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #F37C30; // Old browsers
+  @include filter-gradient(#F37C30, #C3443D, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  #C3443D 0%,#F37C30 19%,#E09127 27%,#F8A02B 100%));
+  @include border-radius(4px);
+  box-shadow: 1px 1px 2px #F37C30 inset, 2px 3px 3px rgba(#fff, 0.09);
+  // width:100%;
+  height:30px;
+  margin:0 0 0 10px;
+  position: relative;
+  .block-inner {
+    margin-left:0;
+    margin-right:0;
+  }
+  .form-select {
+    // background-color:transparent;
+    // color:$white;
+    // border:none;
+    // background-image:image-url('icons/ico_arrow_wht.png');
+    // background-repeat:no-repeat;
+    // background-position:right center;
+    // padding-right:10px;
+    // margin:3px 0 0 5px;
+  }
+  .form-text {
+    color:$white;
+    background:transparent;
+    border:none;
+    margin:3px 0 0 0;
+    // width:200px;
+  }
+  .form-submit {
+    background-color:transparent !important;
+    border:none !important;
+    width:12px !important;
+    height:12px !important;
+    text-indent:-9999px !important;
+    padding:0 !important;
+    margin:10px 2px !important;
+  }
+
+  .form-item-search-block-form label {
+    position: absolute;
+    left: 0px;
+    top: -17px;
+    color: lighten($light_blue, 40%);
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: normal;
+    display: block;
+  }
+}
+
+#header a {
+  color: $orange;
+}
+
+body.front.not-logged-in #block-system-main .pane-1 {
+  width: 50%;
+}
+
+body.front.not-logged-in #block-system-main .pane-2 {
+  width: 50%;
+}

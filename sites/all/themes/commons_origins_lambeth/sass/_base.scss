@@ -1,0 +1,72 @@
+//
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn off support for IE6 or IE7, set those variables to false.
+//
+// AdaptiveTheme does not require special handling for IE8 or later. But Compass
+// defines more Legacy IE variables that you might find useful for your theme.
+// See the documentation at http://compass-style.org/reference/compass/support/
+//
+
+$legacy-support-for-ie6: true;
+$legacy-support-for-ie7: true;
+
+
+//
+// Partials to be shared with all .scss files.
+//
+
+@import 'compass/support';                     // Add Compass' IE and vendor prefix support variables.
+@import 'compass/utilities/general/clearfix';  // Better than Drupal's clearfix.
+@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
+@import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
+
+
+// Color Variables
+// Colors used in the sample global.styles. You can use these to recolor many
+// elements such as forms, tables, tabs etc.
+//
+
+$white: #fff;
+$dark_gray: rgb(51,51,51);
+$gray: rgb(102,102,102);
+$light_gray: rgb(231,226,220);
+$green: rgb(70,186,49);
+$dark_blue: rgb(51,102,153);
+$light_blue: rgb(39,131,185);
+$orange: rgb(243,124,48);
+$light_orange: rgb(248,160,43);
+$dark_orange: rgb(200,63,50);
+$lighter_gray: #eee;
+
+$page: #e6e6e6;    // to match the page background, default is white
+
+/*
+ * Wraps all header elements - branding and .region-header
+ */
+#header {
+  height: 95px;
+  color: $white;
+
+}
+
+.header-color-row-one {
+  height: 74px;
+  background-color: $light_gray;
+  border-top: 4px solid darken($light_gray, 50%);
+
+  .boxshadow & {
+    @include box-shadow($dark_gray 0px -1px 0px);
+    margin-top: 1px;
+  }
+}
+
+.header-color-row-two {
+  background-color: $white;
+  height: 26px;
+  border-top: 1px solid lighten($light_gray, 10%);
+  border-bottom: 1px solid darken($light_gray, 10%);
+}
