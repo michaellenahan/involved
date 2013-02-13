@@ -363,7 +363,7 @@ var {
   // display: inline-block;
   float: left;
   vertical-align: top;
-  width: 395px;
+  width: 300px;
 }
 
 
@@ -980,7 +980,7 @@ h1.node-title {
   float: left;
   @extend %divider-left;
   height: 64px;
-  width: 260px;
+  width: 270px;
 }
 
 
@@ -1157,6 +1157,14 @@ a {
 
     &:hover, &.active-trail {
         background: image-url('icons/mil-icon-events.png') no-repeat center 6px;
+      }
+  }
+
+  .main-menu-impact a {
+    background: image-url('icons/mil-icon-impact-inactive.png') no-repeat center 6px;
+
+    &:hover, &.active-trail {
+        background: image-url('icons/mil-icon-impact.png') no-repeat center 6px;
       }
   }
 }
