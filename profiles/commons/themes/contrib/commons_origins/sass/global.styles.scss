@@ -30,7 +30,7 @@
  *   Base
  * ========================================================================== */
 
-/* 
+/*
  * To preserve theme settings never apply font properties to the HTML element.
  * This is critically important if you are using the Responsive JavaScript
  * feature as this relies on being able to set a pseudo font family on the HTML
@@ -81,15 +81,16 @@ h1 {
 
 
 h2 {
-  color: $orange;
+  color: $dark_blue;
   font-weight: lighter;
   font-size: 54px;
   line-height: 54px;
-  text-transform: uppercase;
+  font-family: $alt-font;
 }
 
+
 h3 {
-  color: $orange;
+  color: $light_blue;
   font-weight: normal;
   font-size: 20px;
   line-height: 20px;
@@ -190,7 +191,7 @@ var {
  * Main wrapper in page.tpl.php, the .container class sets the width of the page, do not add width to it!
  */
 #page  {
-  margin-top: -102px;
+  margin-top: -92px;
   .container {}
 }
 
@@ -201,13 +202,18 @@ var {
 #header {
   height: 95px;
   color: $white;
+  text-align: right;
+  margin-right: 8px;
 
+  a {
+    color: $white;
+  }
 }
 
 .header-color-row-one {
-  height: 74px;
-  background-color: $light_gray;
-  border-top: 4px solid darken($light_gray, 50%);
+  height: 64px;
+  background-color: $dark_blue;
+  border-top: 4px solid darken($dark_blue, 50%);
 
   .boxshadow & {
     @include box-shadow($dark_blue 0px -1px 0px);
@@ -216,17 +222,24 @@ var {
 }
 
 .header-color-row-two {
-  background-color: $white;
+  background-color: $light_blue;
   height: 26px;
-  border-top: 1px solid lighten($light_gray, 10%);
-  border-bottom: 1px solid darken($light_gray, 10%);
+  border-top: 1px solid lighten($light_blue, 10%);
+  border-bottom: 1px solid darken($light_blue, 10%);
 }
 
 
 /*
  * Wraps the sidebars the content column
  */
-#columns {}
+#columns {
+
+  .page-user-login & {
+    @extend %pod;
+    @extend %pod-content;
+    margin-top: 50px;
+  }
+}
 
 
 /*
@@ -244,7 +257,11 @@ var {
 /*
  * Wraps the content region, avoid applying styles to this wrapper, its used mainly for position and invisible gutters and can be problematic to style
  */
-#content {}
+#content {
+  .front.not-logged-in & {
+    background: image-url('commons-drop.png') right top no-repeat;
+  }
+}
 
 
 /*
@@ -363,7 +380,8 @@ var {
   // display: inline-block;
   float: left;
   vertical-align: top;
-  width: 395px;
+  // width: 395px;
+  text-align: left;
 }
 
 
@@ -372,11 +390,24 @@ var {
  */
 #logo {
   display: inline-block;
-  padding: 6px 10px 0 0;
+  padding: 0 10px 0 0;
 
   img {
     vertical-align: bottom;
   }
+
+  // .palette-active & {
+  //   a {
+  //     display: block;
+  //     width: 48px;
+  //     height: 80px;
+  //     background: image-url('logo-general.png') left top no-repeat;
+  //   }
+
+  //   img {
+  //     display: none;
+  //   }
+  // }
 }
 
 
@@ -387,7 +418,6 @@ var {
   display: inline-block;
   vertical-align: top;
   margin-top: 14px;
-  width: 333px;
 
   .site-name-long & {
     margin-top: 16px;
@@ -448,12 +478,12 @@ var {
   font-weight:300;
 
   .page-node & {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 
 #page-top {
-  margin: 20px 0;
+  margin: 20px 0 0;
 }
 
 /* =============================================================================
@@ -519,10 +549,102 @@ ul.links {
   }
 }
 
-ul.primary.tabs li a {
-  @include border-radius(3px 3px 0px 0px);
+ul.primary.tabs {
+  border-bottom: none;
+  padding: 0;
+
+  li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+    a {
+      background-color: #d7d7d7;
+      @include border-radius(3px);
+      padding: 3px 10px;
+      display: block;
+      color: #a5a3a3;
+      border: none;
+
+      &:hover {
+        text-decoration: none;
+        background-color: #d7d7d7;
+        color: #a5a3a3;
+      }
+    }
+
+    &.active a {
+      background-color: $dark_blue;
+      border: none;
+      color: $white;
+
+      &:hover {
+        background-color: $dark_blue;
+      }
+    }
+  }
 }
 
+li.sharethis {
+  @extend %btn-gray;
+  position: relative;
+  padding: 0 24px;
+  height: 20px;
+  margin: 0 7px;
+  cursor: pointer;
+
+  &:hover .sharethis-buttons {
+    display: block;
+  }
+
+  ul.inline & {
+    padding: 0 24px;
+    margin: 0 7px;
+    display: inline-block;
+  }
+
+  &:before {
+    content: '';
+    @include sprite_url_height_width($icons, share);
+  }
+
+  .sharethis-buttons {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    display: none;
+  }
+
+  .sharethis-wrapper {
+    white-space: nowrap;
+    background: $white;
+    border: 1px solid $green;
+    @include border-radius(6px);
+    padding: 10px 8px 3px 8px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      position: absolute;
+      top: 100%;
+    }
+
+    &:before {
+      border-width: 6px 6px 0 6px;
+      border-color: $green transparent transparent transparent;
+      left: 10px;
+    }
+
+    &:after {
+      border-width: 5.5px 5.5px 0 5.5px;
+      border-color: $white transparent transparent transparent;
+      left: 11px;
+    }
+  }
+}
 
 /*
  * Search results are an ordered list so reset the margin
@@ -595,7 +717,25 @@ h1.node-title {
   }
 }
 
-.view-commons-bw-all, #comments {
+.view-activity-group, .view-commons-activity-streams-activity, .view-commons-activity-streams-user-activity {
+  .views-row {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+    &.views-row-last {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      display: none;
+    }
+  }
+}
+
+.view-commons-bw-all, .view-commons-bw-posts, .view-commons-bw-q-a, .view-commons-bw-wikis, .view-commons-bw-polls, #comments {
   .content, .views-field-timestamp {
     margin-left: 70px;
   }
@@ -628,12 +768,12 @@ h1.node-title {
 }
 
 .page-node {
+  // .rate-widget-commons_like {
+  //   @extend %like-btn;
+  // }
+
   .node-content {
     margin-left: 70px;
-
-    .rate-widget-commons_like {
-      @extend %like-btn;
-    }
 
     .user-picture {
       float:left;
@@ -684,6 +824,7 @@ h1.node-title {
 
       li {
         float: left;
+        margin-right: 10px;
       }
     }
   }
@@ -701,6 +842,39 @@ h1.node-title {
       content: '';
       @include sprite_url_height_width($icons, groups);
       top: -1px;
+    }
+  }
+
+  .node nav {
+    // float: left;
+    // width: 50%;
+    clear: both;
+    margin-top: 20px;
+    position:relative;
+
+    ul {
+      float: left;
+    }
+
+    li {
+      float: left;
+
+      &.flag-inappropriate_node {
+        float: none;
+//        position: absolute;
+        bottom: 5px;
+        right: 5px;
+      }
+
+      .flag-commons-follow-group a {
+        font-size: 0;
+        padding: 3px 27px;
+        height: 14px;
+
+        &:before {
+          top: 0;
+        }
+      }
     }
   }
 
@@ -725,6 +899,10 @@ h1.node-title {
           display: none;
         }
       }
+    }
+
+    .form-item-subject input {
+      width: 100%;
     }
 
     .user-picture {
@@ -771,7 +949,6 @@ h1.node-title {
     }
 
     .rate-widget-commons_like {
-      @extend %like-btn;
       position: absolute;
       right: 5px;
       top: 15px;
@@ -779,7 +956,140 @@ h1.node-title {
   }
 }
 
-.page-node .flag-commons-follow-node, .page-node .flag-commons-follow-group {
+.page-node-add {
+  .node-form {
+    position: relative;
+  }
+
+  fieldset {
+    border: none;
+
+    &#edit-og-group-ref-und {
+      padding: 0;
+    }
+  }
+
+  #edit-body {
+    .ckeditor_links {
+      background-color: $white;
+      padding: 5px 15px 0 15px;
+      display: block;
+    }
+
+    fieldset {
+      background-color: $white;
+      @include border-radius(0 0 6px 6px);
+    }
+  }
+
+  #edit-body, .form-item-title, .field-name-og-group-ref, #poll-choice-wrapper, .field-name-field-address-form {
+    width: 66%;
+    float: none;
+
+    input[type="text"] {
+      width: 100%;
+    }
+
+    .lt480 & {
+      width: 100%;
+    }
+  }
+
+  .field-type-taxonomy-term-reference-form {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 33%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    @extend %pod;
+
+    > div {
+      @extend %pod-content;
+      padding: 5px 10px 10px 10px;
+      margin: 0;
+    }
+
+    input[type="text"] {
+      width: 100%;
+    }
+  }
+
+  #edit-additional-settings {
+    // float: right;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 33%;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    @extend %pod;
+
+    > div {
+      @extend %pod-content;
+
+      fieldset {
+        border-bottom: 1px solid $border;
+        padding-left: 0;
+        padding-right: 0;
+
+        &.collapsed {
+          border-bottom: none;
+        }
+
+        fieldset {
+          border-bottom: none;
+        }
+      }
+    }
+
+    input[type="text"] {
+      width: 100%;
+    }
+  }
+
+  #edit-actions {
+    clear: both;
+  }
+}
+
+.node-type-event {
+  .node-content {
+    margin-left: 0;
+
+    .field-name-field-logo {
+      float:left;
+      margin:3px 15px 15px 0;
+      background:$white;
+      padding:4px;
+      @include border-radius(3px);
+      @include box-shadow($light_gray 1px 1px 4px);
+      position:relative;
+      display:block;
+      line-height:0;
+
+      img {
+        width:72px;
+      }
+    }
+
+    // .field-name-field-offsite-url {
+    //   float: right;
+    // }
+
+    .field-name-body {
+      clear: left;
+    }
+
+    .user-picture {
+      display: none;
+    }
+  }
+}
+
+.page-node .flag-commons-follow-node, .page-node .flag-commons-follow-group, .flag-commons-follow-user {
   display: inline-block;
 
   a {
@@ -882,6 +1192,8 @@ h1.node-title {
 .page-user {
   .pane-user-picture {
     display: inline-block;
+    float: left;
+    width: 15%;
 
     .user-picture {
       background: $white;
@@ -896,10 +1208,13 @@ h1.node-title {
   }
 
   .pane-user-field-bio {
-    
+    float: left;
+    width: 80%;
   }
 
   .pane-user-field-facebook-url {
+    float: left;
+    width: 26%;
 
     a {
       display: inline-block;
@@ -914,6 +1229,8 @@ h1.node-title {
   }
 
   .pane-user-field-linkedin-url {
+    float: left;
+    width: 26%;
 
     a {
       display: inline-block;
@@ -928,6 +1245,8 @@ h1.node-title {
   }
 
   .pane-user-field-twitter-url {
+    float: left;
+    width: 26%;
 
     a {
       display: inline-block;
@@ -939,6 +1258,10 @@ h1.node-title {
         top: 7px;
       }
     }
+  }
+
+  .pane-user-flag-commons-follow-user-link {
+    clear: both;
   }
 
   .pane-views-panes {
@@ -970,17 +1293,18 @@ h1.node-title {
  * Regions can be nested, such as when using Panels
  */
 .region-inner .region-inner {}
-// 
+//
 
 /*
  * Header region, embedded in the #header
  */
 .region-header {
-  // display: inline-block;
-  float: left;
-  @extend %divider-left;
+  display: inline-block;
+  // float: left;
+  // @extend %divider-left;
   height: 64px;
-  width: 270px;
+  width: 266px;
+  text-align: left;
 }
 
 
@@ -1044,7 +1368,7 @@ h1.node-title {
 
 a {
   text-decoration: none;
-  color: $light_orange;
+  color: $light_blue;
 
   &:link,
   &:visited {}
@@ -1076,19 +1400,22 @@ a {
  */
 
 #menu-bar.nav {
-  // display: inline-block;
+  display: inline-block;
   // margin-right: -3px;
-  float: left;
+  // float: left;
   vertical-align: top;
   margin:0;
+  @extend %divider-right;
 
-  ul,
+  h3.block-title {
+    display: none;
+  }
+
   ul.menu {
     margin: 0;
     padding: 0;
   }
 
-  li,
   ul.menu li {
     display: inline-block;
     float: left;
@@ -1097,20 +1424,45 @@ a {
     padding: 0;
 
     &:hover, &.active-trail {
-      /* background: image-url('main-nav-hover.png') repeat-x left top; */
+      background: image-url('main-nav-hover.png') repeat-x left top;
       .arrow {
-        background:image-url('main-nav-arrow.png');
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: 0 7px 8px 7px;
+          border-color: transparent transparent lighten($light_blue, 10%) transparent;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          left: 1px;
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: 0 6px 6px 6px;
+          border-color: transparent transparent $light_blue transparent;
+        }
       }
     }
   }
-  li a,
+
   ul.menu li a {
     display: block;
     white-space: nowrap;
-    padding: 45px 13px 0px 13px;
-    height: 28px;
+    padding: 31px 13px 0px 13px;
+    height: 33px;
     text-transform: uppercase;
-    background-position:center 6px;
+    @include text-shadow(#000 1px 1px 4px);
+    background-position:center 10px;
     background-repeat:no-repeat;
     position:relative;
     @extend %divider-left;
@@ -1118,9 +1470,6 @@ a {
     &:hover,
     &:focus {
       text-decoration: none;
-    }
-    &.active {
-      color: $light_orange;
     }
     .arrow {
       width:17px;
@@ -1135,29 +1484,25 @@ a {
   .block {
     margin: 0;
   }
+}
 
-  .main-menu-home a {
-    background: image-url('icons/mil-icon-home-inactive.png') no-repeat center 6px;
+.main-menu-home a {
+  background: image-url('icons/icon-home.png') no-repeat center 10px;
+}
 
-      &:hover, &.active-trail {
-        background: image-url('icons/mil-icon-home.png') no-repeat center 6px;
-      }
-  }
+.main-menu-groups a {
+  background: image-url('icons/icon-groups.png') no-repeat center 10px;
+}
 
-  .main-menu-groups a {
-    background: image-url('icons/mil-icon-groups-inactive.png') no-repeat center 6px;
+.main-menu-events a {
+  background: image-url('icons/icon-events.png') no-repeat center 10px;
+}
 
-      &:hover, &.active-trail {
-        background: image-url('icons/mil-icon-groups.png') no-repeat center 6px;
-      }
-  }
+#menu-bar.nav ul.menu li.main-menu-search {
+  display: none;
 
-  .main-menu-events a {
-    background: image-url('icons/mil-icon-events-inactive.png') no-repeat center 6px;
-
-    &:hover, &.active-trail {
-        background: image-url('icons/mil-icon-events.png') no-repeat center 6px;
-      }
+  a {
+    background: image-url('icons/icon-search.png') no-repeat center 10px;
   }
 }
 
@@ -1349,10 +1694,10 @@ ul.menu {
 
 /* If li.content exists it's a problem, so reset the padding */
 .block .menu li.content {
-  padding: 0;   
+  padding: 0;
 }
 
- 
+
 /* =============================================================================
  *   Book navigation menu
  * ========================================================================== */
@@ -1370,7 +1715,7 @@ ul.menu {
     min-width: 2em;
     white-space: nowrap;
   }
-  
+
   .menu {
     margin-left: 0;
   }
@@ -1777,7 +2122,7 @@ ul.action-links {
 
 
 /*
- * Image Alignment Theme Settings - included here so you can easily override 
+ * Image Alignment Theme Settings - included here so you can easily override
  */
 
 /*
@@ -1817,10 +2162,27 @@ ul.action-links {
  *   Panels Styling
  * ========================================================================== */
 
-.commons-pod {
+.page-node .commons-pod {
   @extend %pod;
   padding: 10px 10px 20px 10px;
   margin-right: 0;
+}
+
+.node-type-group.page-node .commons-pod {
+  padding: 0;
+  background-color: transparent;
+  @include border-radius(0);
+  @include box-shadow(none);
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.commons-pod-comments {
+  display: none;
+
+  .page-node & {
+    display: block;
+  }
 }
 
 .commons-sign-up {
@@ -1859,8 +2221,9 @@ ul.action-links {
 }
 
 .pane-views-panes,
-.pane-views {
-  
+.pane-views,
+body.page-node .pane-views-panes {
+
   h2 {
     font:{
       size:20px;
@@ -1883,7 +2246,7 @@ ul.action-links {
 // }
 
 // move padding to views-row for full stretch borders
-.pane-commons-activity-streams-activity-panel-pane-1,
+// .pane-commons-activity-streams-activity-panel-pane-1,
 .pane-commons-featured-panel-pane-1,
 .pane-commons-events-upcoming {
   .block-inner {
@@ -1933,11 +2296,47 @@ ul.action-links {
     position: relative;
   }
 
-  .comment-add a {
-    @extend %btn-green;
-    position: absolute;
-    right: 0;
-    top: 5px;
+  &.page-node {
+    .pane-node-content {
+      > .block-inner {
+        padding: 0;
+        margin: 0;
+      }
+
+      .node {
+        padding: 25px 10px 20px 10px;
+      }
+
+      footer.submitted {
+        display: none;
+      }
+
+      figure {
+        float:left;
+        margin:3px 10px 5px 0;
+        background:$white;
+        padding:4px;
+        @include border-radius(3px);
+        @include box-shadow($light_gray 1px 1px 4px);
+        position:relative;
+        display:block;
+        line-height:0;
+      }
+
+      .field-name-field-topics {
+        // float: right;
+      }
+
+
+    }
+
+    .node-content {
+      margin-left: 0;
+
+      .user-picture {
+        display: none;
+      }
+    }
   }
 }
 
@@ -1958,6 +2357,16 @@ ul.action-links {
     &:before {
       content: '';
       @include sprite_url_height_width($icons, events);
+      margin-right: 6px;
+    }
+  }
+
+  .type-Poll {
+    font-size: 12px;
+
+    &:before {
+      content: '';
+      @include sprite_url_height_width($icons, polls);
       margin-right: 6px;
     }
   }
@@ -2193,7 +2602,7 @@ ul.action-links {
     a {
       position: relative;
       display: block;
-      
+
       img {
         @include opacity(0.5);
       }
@@ -2278,6 +2687,14 @@ ul.action-links {
   .views-submit-button {
     margin-left: 20px;
   }
+
+  .views-exposed-widget {
+    padding: 0;
+
+    .form-submit {
+      margin-top: 0;
+    }
+  }
 }
 
 .pane-node-commons-groups-group-contributors-count-topics {
@@ -2342,7 +2759,7 @@ ul.action-links {
       font-weight:normal;
       color:$light_gray;
       padding:1px 0 0 0;
-    }  
+    }
   }
   .views-widget {
     float:left;
@@ -2422,6 +2839,14 @@ ul.action-links {
       padding: 10px 10px 10px 27px;
     }
 
+    .commons-polls-create:before {
+      @include sprite_url_height_width($icons, polls);
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 13px;
+    }
+
     .commons-posts-create:before {
       @include sprite_url_height_width($icons, posts);
       content: '';
@@ -2488,6 +2913,21 @@ ul.action-links {
         padding: 0 7px;
       }
     }
+  }
+
+  .comment-add a {
+    @extend %btn-green;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+
+  article {
+    margin-bottom: 25px;
+  }
+
+  .form-submit {
+    margin-top: 0;
   }
 }
 
@@ -2654,15 +3094,23 @@ ul.action-links {
 .block-search {
   display:block;
   // needs latest Compass, add '@import "compass"' to your scss
-  background-color: #F37C30; // Old browsers
-  @include filter-gradient(#F37C30, #C3443D, vertical); // IE6-9
-  @include background-image(linear-gradient(top,  #C3443D 0%,#F37C30 19%,#E09127 27%,#F8A02B 100%));
+  // background-color: #03416a; // Old browsers
+  // @include filter-gradient(#03416a, #00558b, vertical); // IE6-9
+  // @include background-image(linear-gradient(top,  #03416a 0%,#034b7b 19%,#034d7e 27%,#00558b 100%));
+  background-color: darken($dark_blue, 12%); // Old browsers
+  @include filter-gradient(darken($dark_blue, 12%), darken($dark_blue, 6%), vertical); // IE6-9
+  @include background-image(linear-gradient(top,  darken($dark_blue, 12%) 0%,darken($dark_blue, 6%)100%));
   @include border-radius(4px);
-  box-shadow: 1px 1px 2px #F37C30 inset, 2px 3px 3px rgba(#fff, 0.09);
+  box-shadow: 1px 1px 2px #000 inset, 2px 3px 3px rgba(#fff, 0.09);
   // width:100%;
   height:30px;
   margin:0 0 0 10px;
   position: relative;
+
+  .not-logged-in & {
+    margin-top: 15px;
+  }
+
   .block-inner {
     margin-left:0;
     margin-right:0;
@@ -2682,7 +3130,11 @@ ul.action-links {
     background:transparent;
     border:none;
     margin:3px 0 0 0;
-    // width:200px;
+    width:145px;
+
+    .node-type-group & {
+      width:120px;
+    }
   }
   .form-submit {
     background-color:transparent !important;
@@ -2892,8 +3344,8 @@ ul.action-links {
 
 body.page-node {
   h2 {
-    font-size: 26px;
-    line-height: 38px;
+    font-size: 54px;
+    line-height: 54px;
     font-weight: normal;
   }
 }
@@ -3026,6 +3478,47 @@ body.page-node.node-type-group {
   margin-left: 40px;
 }
 
+.rate-widget-commons_thumbs_up_down {
+  float:right;
+  width:68px;
+  height:75px;
+  position:relative;
+  .item-list ul {
+    margin:0;
+    position:absolute;
+    bottom:0;
+    width:68px;
+    li {
+      margin:0;
+      list-style-type:none;
+      .rate-button {
+        display:block;
+        width:32px;
+        height:30px;
+        background-image:image-url('icons/updown.png');
+        text-indent:-9999px;
+      }
+      .rate-button[title="up"] {
+        background-position:left top;
+        float:left;
+      }
+      .rate-button[title="down"] {
+        background-position:right top;
+        float:right;
+      }
+    }
+  }
+  .rate-info {
+    position:absolute;
+    top:0;
+    width:52px;
+    height:36px;
+    padding:4px 8px;
+    background:image-url('icons/bkg_updown.png');
+    text-align:center;
+  }
+}
+
 
 /* =============================================================================
  *   Forms
@@ -3042,7 +3535,7 @@ body.page-node.node-type-group {
 /*
  * Wrapper for a form element (or group of form elements) and its label
  */
-.form-item { 
+.form-item {
 
   input.error,
   textarea.error,
@@ -3054,7 +3547,7 @@ body.page-node.node-type-group {
     font-weight: 700;
   }
 
-  label.option { 
+  label.option {
   }
 
   .description {
@@ -3079,7 +3572,7 @@ body.page-node.node-type-group {
 /*
  * The submit button
  */
-.form-submit { 
+.form-submit {
 }
 
 
@@ -3100,14 +3593,14 @@ fieldset {
 /*
  * Tips for Drupal's input formats
  */
-.tips { 
+.tips {
 }
 
 
 /*
  * Buttons used by contrib modules like Media
  */
-a.button { 
+a.button {
   @include appearance(button);
 }
 
@@ -3160,8 +3653,8 @@ form.commons-events-form-float {
   }
 }
 
-#content-column #edit-submit {
-  @extend %btn-orange;
+#content-column .view-content input[type="submit"] {
+  @extend %btn-green;
   margin:0 15px 0 0;
   padding: 5px 20px;
 }
@@ -3176,15 +3669,9 @@ form.commons-events-form-float {
   padding:0;
   border:none;
   border-radius:0;
-  input {
-    margin:0;
-    background-color: #6eca5d; // Old browsers
-    @include filter-gradient(#6eca5d, #45bb2f, vertical); // IE6-9
-    @include background-image(linear-gradient(top,  #6eca5d 0%,#45bb2f 22%,#45bb2f 100%));
-    border: 1px solid #249125;
-    color: #FFFFFF;
-    @include text-shadow(#000 1px 1px 1px);
-    font-size:1em;
+  input, input:hover {
+    @extend %btn-green;
+    padding: 3px 10px;
   }
 }
 
@@ -3460,7 +3947,7 @@ body.front.not-logged-in {
   #block-system-main {
     .pane-1 {
       float:left;
-      width:60%;
+      width:56%;
       .pane-title {
         font-weight:700;
         font-size:38px;
@@ -3471,6 +3958,15 @@ body.front.not-logged-in {
       float:right;
       width:40%;
     }
+  }
+}
+
+.commons-events-form-float {
+  float: right;
+  margin-left: 15px;
+
+  input {
+    margin: 0;
   }
 }
 
@@ -3512,14 +4008,14 @@ body.front.logged-in {
       .node-content {
         margin:0 0 0 78px;
         form {
-          
+
         }
 
         .field-name-body {
           margin-right: 90px;
         }
       }
-      footer .user-picture {
+      .user-picture {
         position:absolute;
         left:0;
         top:10px;
@@ -3534,7 +4030,7 @@ body.front.logged-in {
     }
     .item-list {
       // border-top:1px solid $white;
-      padding:10px 0 0 0;      
+      padding:10px 0 0 0;
     }
     // .pager a {
     //   display:inline-block;
@@ -3553,15 +4049,38 @@ body.front.logged-in {
     //   }
     // }
   }
-  .views-exposed-widgets {
+  #views-exposed-form-commons-homepage-content-panel-pane-1 .views-exposed-widgets {
     margin-top:-45px;
-    margin-left:-10px;
+    // margin-left:-10px;
+    padding: 0;
+
+    &.widgets-active {
+      @extend %pod;
+      @extend %pod-content;
+      padding-bottom: 10px;
+
+      .selectBox-dropdown {
+        background-color: $white;
+      }
+    }
   }
 }
 
 .front {
   .region-two-66-33-first, .region-two-66-33-second {
     margin-top: 40px;
+  }
+}
+
+#quicktabs-commons_follow_ui .flag-email-group a {
+  cursor: default;
+
+  input {
+    cursor: default;
+  }
+
+  span {
+    display: none;
   }
 }
 
@@ -3581,14 +4100,130 @@ body.front.logged-in {
   }
 }
 
-/* =============================================================================
- *   Quicktab Pills
- * ========================================================================== */
+// Events Page
 
- .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a {
-    background-color: $orange;
- }
+.page-events {
 
- .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a::after {
-    border-color: $orange transparent transparent transparent;
- }
+  .search-results-wrapper .search-result {
+    @extend %pod;
+
+    .search-result-wrapper {
+      @extend %pod-content;
+    }
+  }
+
+  .region-three-25-50-25-first {
+    @extend %pod;
+    margin-right: 0;
+
+    .region-inner {
+      @extend %pod-content;
+    }
+
+    h3 {
+      color: $gray;
+      font-size: 18px;
+    }
+
+    .panel-pane {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .region-three-25-50-25-third {
+    .pane-views-panes {
+      @extend %pod;
+      margin-right: 0;
+
+      .block-inner {
+        @extend %pod-content;
+      }
+    }
+  }
+
+  div.search-result-wrapper h3.title {
+    text-decoration: none;
+
+    a {
+      color: $light_blue;
+    }
+  }
+
+}
+
+.pane-commons-events-commons-events-create-event-link {
+  text-align: right;
+
+  .block-inner {
+    margin: 0;
+  }
+
+  a {
+    @extend %btn-green;
+    font-size: 1.1em;
+
+    &:before {
+      @include sprite_url_height_width($icons, icon-events);
+      content: '';
+      top: 2px;
+      margin-right: 6px;
+    }
+  }
+}
+
+// Search
+
+.page-search {
+  .region-two-33-66-first {
+    @extend %pod;
+
+    .region-inner {
+      @extend %pod-content;
+    }
+
+    h3 {
+      color: $gray;
+      font-size: 18px;
+    }
+
+    .panel-pane {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .search-results {
+    @extend %pod;
+    @extend %pod-content;
+  }
+}
+
+// Commons Origins Pallete Choices
+
+#edit-commons-origins-palette {
+  .form-item-commons-origins-palette {
+    clear: both;
+    margin-bottom: 10px;
+
+    input[type="radio"] {
+      float: left;
+    }
+
+    label {
+      margin-left: 20px;
+    }
+  }
+}
+
+// Login & Signup Form
+#user-login, #user-register-form {
+  input[type="text"], input[type="password"] {
+    width: 100%;
+  }
+}
+
+// Import the color palettes
+@import 'palettes';

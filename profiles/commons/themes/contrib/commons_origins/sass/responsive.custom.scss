@@ -50,6 +50,30 @@
     float: none;
     width: 100%;
   }
+
+  .view-commons-groups-directory .view-filters .form-text {
+    width: 280px;
+  }
+
+  #branding {
+    margin-right: 6px;
+  }
+
+  .commons-bw-create-all-widget-types {
+    left: -100px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .page-node-add #edit-additional-settings {
+    width: 100%;
+    position: static;
+  }
+
+  .page-node-add .field-type-taxonomy-term-reference-form {
+    width: 100%;
+    position: static;
+  }
 }
 
 
@@ -63,3 +87,57 @@
  * Desktops/laptops and up
  */
 /* @media only screen and (min-width: 1025px) {} */
+
+@media only screen and (max-width: 935px) {
+  #name-and-slogan {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #header {
+    margin-right: 0;
+    position: relative;
+  }
+
+  .header-color-row-one {
+    border-top-width: 18px;
+  }
+
+  #menu-bar.nav {
+    border-right: 0;
+    @include box-shadow(#4082A7 0px 0px 0px);
+
+    html & {
+      font-size: 87.5%
+    }
+
+    ul.menu li {
+      a {
+        font-size: 12px;
+        padding: 31px 7px 0px 7px;
+      }
+      
+      &.main-menu-search {
+        display: inline-block;
+      }
+    }
+  }
+
+  .region-header {
+    height: auto;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+  }
+
+  #block-search-form {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #name-and-slogan {
+    display: none;
+  }
+}
