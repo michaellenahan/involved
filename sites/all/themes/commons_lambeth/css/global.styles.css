@@ -123,7 +123,7 @@
 /* line 87, ../sass/_extend-styles.scss */
 .page-node .node-content .rate-widget-commons_like .rate-commons-like-btn:before, .page-node #comments .rate-widget-commons_like .rate-commons-like-btn:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -819px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -929px no-repeat;
   width: 10px;
   height: 14px;
   display: inline-block;
@@ -734,7 +734,7 @@ h1.node-title a:hover {
 /* line 692, ../sass/global.styles.scss */
 .page-node .field-name-field-topics .field-item:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -1386px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1496px no-repeat;
   width: 8px;
   height: 8px;
   display: inline-block;
@@ -746,7 +746,7 @@ h1.node-title a:hover {
 /* line 700, ../sass/global.styles.scss */
 .page-node .field-name-og-group-ref .field-item:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -1232px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1342px no-repeat;
   width: 8px;
   height: 8px;
   display: inline-block;
@@ -770,7 +770,7 @@ h1.node-title a:hover {
 /* line 716, ../sass/global.styles.scss */
 .page-node #comments h2.comment-title:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -360px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -470px no-repeat;
   width: 31px;
   height: 24px;
   display: inline-block;
@@ -831,7 +831,7 @@ h1.node-title a:hover {
 /* line 765, ../sass/global.styles.scss */
 .page-node #comments .comment-reply:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -1292px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1402px no-repeat;
   width: 13px;
   height: 12px;
   display: inline-block;
@@ -859,7 +859,7 @@ h1.node-title a:hover {
 /* line 788, ../sass/global.styles.scss */
 .page-node .flag-commons-follow-node a:before, .page-node .flag-commons-follow-group a:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -1170px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1280px no-repeat;
   width: 13px;
   height: 11px;
   display: inline-block;
@@ -889,7 +889,7 @@ h1.node-title a:hover {
 .flag-inappropriate-node:before {
   content: '';
   top: 0;
-  background: url('../images/icons-sdd18561639.png') 0 0 no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 0 no-repeat;
   width: 12px;
   height: 10px;
   display: inline-block;
@@ -990,7 +990,7 @@ h1.node-title a:hover {
 /* line 907, ../sass/global.styles.scss */
 .page-user .pane-user-field-facebook-url a:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -496px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -606px no-repeat;
   width: 26px;
   height: 26px;
   display: inline-block;
@@ -1007,7 +1007,7 @@ h1.node-title a:hover {
 /* line 921, ../sass/global.styles.scss */
 .page-user .pane-user-field-linkedin-url a:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -404px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -514px no-repeat;
   width: 26px;
   height: 26px;
   display: inline-block;
@@ -1024,7 +1024,7 @@ h1.node-title a:hover {
 /* line 935, ../sass/global.styles.scss */
 .page-user .pane-user-field-twitter-url a:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -450px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -560px no-repeat;
   width: 26px;
   height: 26px;
   display: inline-block;
@@ -1207,12 +1207,12 @@ a:hover, a:focus {
   background: url('../images/icons/mil-icon-events.png?1360758392') no-repeat center 6px;
 }
 /* line 1163, ../sass/global.styles.scss */
-#menu-bar.nav .main-menu-impact a {
-  background: url('../images/icons/mil-icon-impact-inactive.png') no-repeat center 6px;
+#menu-bar.nav .main-menu-node- a {
+  background: url('../images/icons/mil-icon-impact-inactive.png?1360831680') no-repeat center 6px;
 }
 /* line 1166, ../sass/global.styles.scss */
-#menu-bar.nav .main-menu-impact a:hover, #menu-bar.nav .main-menu-impact a.active-trail {
-  background: url('../images/icons/mil-icon-impact.png') no-repeat center 6px;
+#menu-bar.nav .main-menu-node- a:hover, #menu-bar.nav .main-menu-node- a.active-trail {
+  background: url('../images/icons/mil-icon-impact.png?1360831728') no-repeat center 6px;
 }
 
 /* line 1172, ../sass/global.styles.scss */
@@ -1800,7 +1800,7 @@ ul.action-links {
 /* line 1956, ../sass/global.styles.scss */
 .view-commons-radioactivity-groups-most-active .type-Wiki:before, .view-commons-groups-recent-content .type-Wiki:before, .view-commons-radioactivity-groups-active-in-group .type-Wiki:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -754px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -864px no-repeat;
   width: 13px;
   height: 13px;
   display: inline-block;
@@ -1816,7 +1816,7 @@ ul.action-links {
 /* line 1966, ../sass/global.styles.scss */
 .view-commons-radioactivity-groups-most-active .type-Event:before, .view-commons-groups-recent-content .type-Event:before, .view-commons-radioactivity-groups-active-in-group .type-Event:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -946px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1056px no-repeat;
   width: 12px;
   height: 12px;
   display: inline-block;
@@ -1832,7 +1832,7 @@ ul.action-links {
 /* line 1976, ../sass/global.styles.scss */
 .view-commons-radioactivity-groups-most-active .type-Post:before, .view-commons-groups-recent-content .type-Post:before, .view-commons-radioactivity-groups-active-in-group .type-Post:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -1201px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1311px no-repeat;
   width: 11px;
   height: 11px;
   display: inline-block;
@@ -1848,7 +1848,7 @@ ul.action-links {
 /* line 1986, ../sass/global.styles.scss */
 .view-commons-radioactivity-groups-most-active .type-Question:before, .view-commons-radioactivity-groups-most-active .type-Answer:before, .view-commons-groups-recent-content .type-Question:before, .view-commons-groups-recent-content .type-Answer:before, .view-commons-radioactivity-groups-active-in-group .type-Question:before, .view-commons-radioactivity-groups-active-in-group .type-Answer:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -882px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -992px no-repeat;
   width: 13px;
   height: 13px;
   display: inline-block;
@@ -1900,7 +1900,7 @@ ul.action-links {
 }
 /* line 2026, ../sass/global.styles.scss */
 .pane-commons-groups-commons-groups-create-group a:before {
-  background: url('../images/icons-sdd18561639.png') 0 -651px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -761px no-repeat;
   width: 15px;
   height: 15px;
   display: inline-block;
@@ -2171,7 +2171,7 @@ ul.action-links {
 /* line 2303, ../sass/global.styles.scss */
 .pane-node-flag-commons-follow-group-link .flag-action:before {
   content: '';
-  background: url('../images/icons-sdd18561639.png') 0 -853px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -963px no-repeat;
   width: 11px;
   height: 9px;
   display: inline-block;
@@ -2243,7 +2243,7 @@ ul.action-links {
 }
 /* line 2376, ../sass/global.styles.scss */
 .commons-bw-create-choose span {
-  background: url('../images/icons-sdd18561639.png') 0 -1356px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1466px no-repeat;
   width: 8px;
   height: 10px;
   display: inline-block;
@@ -2314,7 +2314,7 @@ ul.action-links {
 }
 /* line 2433, ../sass/global.styles.scss */
 .commons-bw-create-all-widget-types li .commons-posts-create:before {
-  background: url('../images/icons-sdd18561639.png') 0 -1201px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1311px no-repeat;
   width: 11px;
   height: 11px;
   display: inline-block;
@@ -2328,7 +2328,7 @@ ul.action-links {
 }
 /* line 2441, ../sass/global.styles.scss */
 .commons-bw-create-all-widget-types li .commons-wikis-create:before {
-  background: url('../images/icons-sdd18561639.png') 0 -754px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -864px no-repeat;
   width: 13px;
   height: 13px;
   display: inline-block;
@@ -2342,7 +2342,7 @@ ul.action-links {
 }
 /* line 2449, ../sass/global.styles.scss */
 .commons-bw-create-all-widget-types li .commons-events-create:before {
-  background: url('../images/icons-sdd18561639.png') 0 -946px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -1056px no-repeat;
   width: 12px;
   height: 12px;
   display: inline-block;
@@ -2356,7 +2356,7 @@ ul.action-links {
 }
 /* line 2457, ../sass/global.styles.scss */
 .commons-bw-create-all-widget-types li .commons-q-a-create:before {
-  background: url('../images/icons-sdd18561639.png') 0 -882px no-repeat;
+  background: url('../images/icons-s31d020fb08.png') 0 -992px no-repeat;
   width: 13px;
   height: 13px;
   display: inline-block;
