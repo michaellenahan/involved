@@ -50,11 +50,10 @@ body {
 .header-color-row-one {
   height: 74px;
   background-color: $light_gray;
-  border-top: 4px solid darken($light_gray, 50%);
+  border-top: 4px solid darken($light_gray, 5%);
 
   .boxshadow & {
-    @include box-shadow($dark_gray 0px -1px 0px);
-    margin-top: 1px;
+    @include box-shadow(none);
   }
 }
 
@@ -352,4 +351,8 @@ form.commons-events-form-float input,
 form.commons-events-form-float input:hover, 
 .pane-commons-events-commons-events-create-event-link a {
     @extend %btn-green;
+}
+
+.front.not-logged-in #content {
+  background: none;
 }

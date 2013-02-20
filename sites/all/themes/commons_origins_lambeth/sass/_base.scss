@@ -54,7 +54,7 @@ $page: #e6e6e6;    // to match the page background, default is white
   background-color: $orange; // Old browsers
   @include filter-gradient($lighter_orange, $dark_orange, vertical); // IE6-9
   @include background-image(linear-gradient(top,  $lighter_orange 0%,$light_orange 12%, $orange 33%,$dark_orange 100%));
-  border: #FFF;
+  border: 1px solid $dark_orange;
   text-align: center;
   display: inline-block;
   text-shadow: 1px 1px rgba(#000, 0.49);
