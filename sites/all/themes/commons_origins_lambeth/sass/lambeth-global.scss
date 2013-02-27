@@ -332,6 +332,11 @@ body.front.not-logged-in #block-system-main .region-conditional-stack .panel-pan
   width: 50%;
 }
 
+body.front.not-logged-in #block-system-main .pane-1 {
+  float: none;
+  width: auto;
+}
+
 .block-search .selectBox-dropdown .selectBox-label {
   color: #FFF;
 }

@@ -395,12 +395,18 @@ body.front.not-logged-in #block-system-main .region-conditional-stack .panel-pan
 }
 
 /* line 335, ../sass/lambeth-global.scss */
+body.front.not-logged-in #block-system-main .pane-1 {
+  float: none;
+  width: auto;
+}
+
+/* line 340, ../sass/lambeth-global.scss */
 .block-search .selectBox-dropdown .selectBox-label {
   color: #FFF;
 }
 
 /* Update button sty;es */
-/* line 352, ../sass/lambeth-global.scss */
+/* line 357, ../sass/lambeth-global.scss */
 .front.not-logged-in #content {
   background: none;
 }
