@@ -349,7 +349,7 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
 
 /* Custom pane style */
 
-.panel-style .panel-pane {
+.panel-style {
   @extend %pod;
   .block-inner {
     @extend %pod-content;
@@ -358,6 +358,11 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
     font-size: 20px;
     color: #666666;
   }
+}
+
+#panels-ipe-paneid-16 .panel-style {
+  margin-left: 10px;
+  margin-right: 30px;
 }
 
 
