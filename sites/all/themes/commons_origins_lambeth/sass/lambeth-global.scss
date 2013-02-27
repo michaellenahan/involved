@@ -337,9 +337,22 @@ body.front.not-logged-in #block-system-main .pane-1 {
   width: auto;
 }
 
+body.front.not-logged-in #block-system-main .pane-1 .pane-title {
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
 .block-search .selectBox-dropdown .selectBox-label {
   color: #FFF;
 }
+
+/* Custom pane style */
+
+.panel-style {
+  @extend %btn-green;
+}
+
 
 /* Update button sty;es */
 

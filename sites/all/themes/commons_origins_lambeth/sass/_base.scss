@@ -63,3 +63,15 @@ $page: #e6e6e6;    // to match the page background, default is white
     text-decoration: none;
   }
 }
+
+%pod {
+  background-color: $white;
+  @include border-radius(3px);
+  @include box-shadow($light_gray 1px 1px 4px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  .lt480 & {
+    margin-right: 0;
+  }
+}

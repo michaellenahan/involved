@@ -1,6 +1,6 @@
 /* Extend styles */
 /* line 50, ../sass/_base.scss */
-.commons-sign-up,
+.panel-style, .commons-sign-up,
 .pane-commons-groups-commons-groups-create-group a,
 #quicktabs-container-commons_bw .quicktabs-tabpage .attachment-before > a,
 #quicktabs-container-commons_bw .quicktabs-tabpage .comment-add a,
@@ -24,7 +24,7 @@ form.commons-events-form-float input:hover,
   text-shadow: 1px 1px rgba(0, 0, 0, 0.49);
 }
 /* line 62, ../sass/_base.scss */
-.commons-sign-up:hover,
+.panel-style:hover, .commons-sign-up:hover,
 .pane-commons-groups-commons-groups-create-group a:hover,
 #quicktabs-container-commons_bw .quicktabs-tabpage .attachment-before > a:hover,
 #quicktabs-container-commons_bw .quicktabs-tabpage .comment-add a:hover,
@@ -401,12 +401,20 @@ body.front.not-logged-in #block-system-main .pane-1 {
 }
 
 /* line 340, ../sass/lambeth-global.scss */
+body.front.not-logged-in #block-system-main .pane-1 .pane-title {
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
+/* line 346, ../sass/lambeth-global.scss */
 .block-search .selectBox-dropdown .selectBox-label {
   color: #FFF;
 }
 
+/* Custom pane style */
 /* Update button sty;es */
-/* line 357, ../sass/lambeth-global.scss */
+/* line 370, ../sass/lambeth-global.scss */
 .front.not-logged-in #content {
   background: none;
 }
