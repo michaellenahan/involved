@@ -224,7 +224,7 @@ a {
       }
   }
 
-  .main-menu-events a {
+  .main-menu-events a, .menu-item-896 a {
     background: url(../images/icons/mil-icon-events-inactive.png) no-repeat center 6px;
 
     &:hover, &.active-trail {
@@ -232,7 +232,7 @@ a {
       }
   }
 
-  .main-menu-node- a {
+  .menu-item-874 a {
     background: url(../images/icons/mil-icon-impact-inactive.png) no-repeat center 6px;
 
     &:hover, &.active-trail {
@@ -379,6 +379,27 @@ form.commons-events-form-float input:hover,
     @extend %btn-green;
 }
 
+/* Remove background image */
 .front.not-logged-in #content {
   background: none;
+}
+
+.page-node .node-content {
+  padding: 0 20px;
+  margin-left: 0px;
+}
+
+h3 {
+  color: $dark-orange;
+}
+
+/* Footer Building blocks */
+.build-block {
+  width: 12.5%;
+  background: $dark-orange;
+}
+
+.bb-red {
+  width: 12.5%;
+  background-color: $orange;
 }
