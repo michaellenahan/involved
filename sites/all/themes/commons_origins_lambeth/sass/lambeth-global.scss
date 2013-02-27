@@ -349,8 +349,11 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
 
 /* Custom pane style */
 
-.panel-style {
+.panel-style .pnael-pane {
   @extend %pod;
+  .block-inner {
+    @extend %pod-content;
+  }
 }
 
 

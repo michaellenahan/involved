@@ -67,11 +67,15 @@ $page: #e6e6e6;    // to match the page background, default is white
 %pod {
   background-color: $white;
   @include border-radius(3px);
-  @include box-shadow($light_gray 1px 1px 4px);
+  @include box-shadow(#A5A5A5 1px 1px 4px);
   margin-right: 20px;
   margin-bottom: 20px;
 
   .lt480 & {
     margin-right: 0;
   }
+}
+
+%pod-content {
+  padding: 10px 10px 20px 10px;
 }
