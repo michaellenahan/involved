@@ -349,10 +349,14 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
 
 /* Custom pane style */
 
-.panel-style .pnael-pane {
+.panel-style .panel-pane {
   @extend %pod;
   .block-inner {
     @extend %pod-content;
+  }
+  h2 {
+    font-size: 20px;
+    color: #666666;
   }
 }
 

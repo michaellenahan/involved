@@ -35,7 +35,7 @@ form.commons-events-form-float input:hover,
 }
 
 /* line 67, ../sass/_base.scss */
-.panel-style .pnael-pane {
+.panel-style .panel-pane {
   background-color: white;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -49,12 +49,12 @@ form.commons-events-form-float input:hover,
   margin-bottom: 20px;
 }
 /* line 74, ../sass/_base.scss */
-.lt480 .panel-style .pnael-pane, .panel-style .lt480 .pnael-pane {
+.lt480 .panel-style .panel-pane, .panel-style .lt480 .panel-pane {
   margin-right: 0;
 }
 
 /* line 79, ../sass/_base.scss */
-.panel-style .pnael-pane .block-inner {
+.panel-style .panel-pane .block-inner {
   padding: 10px 10px 20px 10px;
 }
 
@@ -437,8 +437,14 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
 }
 
 /* Custom pane style */
+/* line 357, ../sass/lambeth-global.scss */
+.panel-style .panel-pane h2 {
+  font-size: 20px;
+  color: #666666;
+}
+
 /* Update button sty;es */
-/* line 373, ../sass/lambeth-global.scss */
+/* line 377, ../sass/lambeth-global.scss */
 .front.not-logged-in #content {
   background: none;
 }
