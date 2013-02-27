@@ -328,11 +328,7 @@ ul.primary.tabs li a:hover {
   color: $orange;
 }
 
-body.front.not-logged-in #block-system-main .pane-1 {
-  width: 50%;
-}
-
-body.front.not-logged-in #block-system-main .pane-2 {
+body.front.not-logged-in #block-system-main .region-conditional-stack .panel-pane {
   width: 50%;
 }
 

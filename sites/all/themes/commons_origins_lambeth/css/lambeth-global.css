@@ -36,7 +36,7 @@ form.commons-events-form-float input:hover,
 
 /* line 354, icons/*.png */
 .icons-sprite {
-  background: url('/images/icons-s87e6c7e59a.png') no-repeat;
+  background: url('/images/icons-s661aa5a4ee.png') no-repeat;
 }
 
 /* line 4, ../sass/lambeth-global.scss */
@@ -390,22 +390,17 @@ ul.primary.tabs li a:hover {
 }
 
 /* line 331, ../sass/lambeth-global.scss */
-body.front.not-logged-in #block-system-main .pane-1 {
+body.front.not-logged-in #block-system-main .region-conditional-stack .panel-pane {
   width: 50%;
 }
 
 /* line 335, ../sass/lambeth-global.scss */
-body.front.not-logged-in #block-system-main .pane-2 {
-  width: 50%;
-}
-
-/* line 339, ../sass/lambeth-global.scss */
 .block-search .selectBox-dropdown .selectBox-label {
   color: #FFF;
 }
 
 /* Update button sty;es */
-/* line 356, ../sass/lambeth-global.scss */
+/* line 352, ../sass/lambeth-global.scss */
 .front.not-logged-in #content {
   background: none;
 }
