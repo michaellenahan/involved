@@ -305,19 +305,19 @@ a:hover, a:focus {
   background: url(../images/icons/mil-icon-groups.png) no-repeat center 6px;
 }
 /* line 227, ../sass/lambeth-global.scss */
-#menu-bar.nav .main-menu-events a {
+#menu-bar.nav .main-menu-events a, #menu-bar.nav .menu-item-896 a {
   background: url(../images/icons/mil-icon-events-inactive.png) no-repeat center 6px;
 }
 /* line 230, ../sass/lambeth-global.scss */
-#menu-bar.nav .main-menu-events a:hover, #menu-bar.nav .main-menu-events a.active-trail {
+#menu-bar.nav .main-menu-events a:hover, #menu-bar.nav .main-menu-events a.active-trail, #menu-bar.nav .menu-item-896 a:hover, #menu-bar.nav .menu-item-896 a.active-trail {
   background: url(../images/icons/mil-icon-events.png) no-repeat center 6px;
 }
 /* line 235, ../sass/lambeth-global.scss */
-#menu-bar.nav .main-menu-node- a {
+#menu-bar.nav .menu-item-874 a {
   background: url(../images/icons/mil-icon-impact-inactive.png) no-repeat center 6px;
 }
 /* line 238, ../sass/lambeth-global.scss */
-#menu-bar.nav .main-menu-node- a:hover, #menu-bar.nav .main-menu-node- a.active-trail {
+#menu-bar.nav .menu-item-874 a:hover, #menu-bar.nav .menu-item-874 a.active-trail {
   background: url(../images/icons/mil-icon-impact.png) no-repeat center 6px;
 }
 
@@ -450,7 +450,32 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
 }
 
 /* Update button sty;es */
-/* line 382, ../sass/lambeth-global.scss */
+/* Remove background image */
+/* line 383, ../sass/lambeth-global.scss */
 .front.not-logged-in #content {
   background: none;
+}
+
+/* line 387, ../sass/lambeth-global.scss */
+.page-node .node-content {
+  padding: 0 20px;
+  margin-left: 0px;
+}
+
+/* line 392, ../sass/lambeth-global.scss */
+h3 {
+  color: #c83f32;
+}
+
+/* Footer Building blocks */
+/* line 397, ../sass/lambeth-global.scss */
+.build-block {
+  width: 12.5%;
+  background: #c83f32;
+}
+
+/* line 402, ../sass/lambeth-global.scss */
+.bb-red {
+  width: 12.5%;
+  background-color: #f37c30;
 }
