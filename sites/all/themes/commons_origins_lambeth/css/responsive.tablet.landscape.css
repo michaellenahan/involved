@@ -1,0 +1,31 @@
+/* Extend styles */
+/*
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete 
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+/* line 15, ../sass/responsive.tablet.landscape.scss */
+#branding {
+  float: left;
+  width: 300px;
+}
+
+/* line 20, ../sass/responsive.tablet.landscape.scss */
+.header-color-row-one {
+  background-color: #e7e2dc;
+}
+
+/* line 24, ../sass/responsive.tablet.landscape.scss */
+.header-color-row-two {
+  background-color: white;
+}
+
+/* line 28, ../sass/responsive.tablet.landscape.scss */
+#menu-bar.nav {
+  float: left;
+  margin-top: 0;
+}

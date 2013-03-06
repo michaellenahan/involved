@@ -74,35 +74,36 @@ form.commons-events-form-float input:hover,
 /* line 11, ../sass/lambeth-global.scss */
 #page-title {
   margin-bottom: 10px;
+  clear: left;
 }
 
-/* line 15, ../sass/lambeth-global.scss */
+/* line 16, ../sass/lambeth-global.scss */
 h1.node-title {
   color: #f37c30;
   font-size: 20px;
 }
-/* line 18, ../sass/lambeth-global.scss */
+/* line 19, ../sass/lambeth-global.scss */
 h1.node-title a {
   text-decoration: none;
   color: #f37c30;
 }
-/* line 21, ../sass/lambeth-global.scss */
+/* line 22, ../sass/lambeth-global.scss */
 h1.node-title a:hover {
   text-decoration: underline;
 }
 
-/* line 27, ../sass/lambeth-global.scss */
+/* line 28, ../sass/lambeth-global.scss */
 h2 {
   color: #f37c30;
   text-transform: uppercase;
 }
 
-/* line 32, ../sass/lambeth-global.scss */
+/* line 33, ../sass/lambeth-global.scss */
 html {
   background: #e6e6e6;
 }
 
-/* line 36, ../sass/lambeth-global.scss */
+/* line 37, ../sass/lambeth-global.scss */
 body {
   font-size: 87.5%;
   color: #333333;
@@ -111,26 +112,26 @@ body {
 /*
  * Wraps all header elements - branding and .region-header
  */
-/* line 44, ../sass/lambeth-global.scss */
+/* line 45, ../sass/lambeth-global.scss */
 #header {
   height: 95px;
   color: white;
 }
 
-/* line 50, ../sass/lambeth-global.scss */
+/* line 51, ../sass/lambeth-global.scss */
 .header-color-row-one {
   height: 74px;
-  background-color: #e7e2dc;
+  background-color: white;
   border-top: 4px solid #ddd5cd;
 }
-/* line 55, ../sass/lambeth-global.scss */
+/* line 56, ../sass/lambeth-global.scss */
 .boxshadow .header-color-row-one {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 60, ../sass/lambeth-global.scss */
+/* line 61, ../sass/lambeth-global.scss */
 .header-color-row-two {
   background-color: white;
   height: 26px;
@@ -144,22 +145,24 @@ body {
 /*
  * Wraps all the branding elements, logo, name and slogan
  */
-/* line 74, ../sass/lambeth-global.scss */
+/* line 75, ../sass/lambeth-global.scss */
 #branding {
-  float: left;
+  float: none;
   vertical-align: top;
   width: 300px;
+  width: auto;
+  text-align: center;
 }
 
 /*
  * Logo
  */
-/* line 85, ../sass/lambeth-global.scss */
+/* line 88, ../sass/lambeth-global.scss */
 #logo {
   display: inline-block;
   padding: 6px 10px 0 0;
 }
-/* line 89, ../sass/lambeth-global.scss */
+/* line 92, ../sass/lambeth-global.scss */
 #logo img {
   vertical-align: bottom;
 }
@@ -167,7 +170,7 @@ body {
 /*
  * Header region, embedded in the #header
  */
-/* line 97, ../sass/lambeth-global.scss */
+/* line 100, ../sass/lambeth-global.scss */
 .region-header {
   float: left;
   height: 64px;
@@ -177,12 +180,12 @@ body {
 /* =============================================================================
  *   Links
  * ========================================================================== */
-/* line 108, ../sass/lambeth-global.scss */
+/* line 111, ../sass/lambeth-global.scss */
 a {
   text-decoration: none;
   color: #f8a02b;
 }
-/* line 119, ../sass/lambeth-global.scss */
+/* line 122, ../sass/lambeth-global.scss */
 a:hover, a:focus {
   text-decoration: underline;
 }
@@ -190,7 +193,7 @@ a:hover, a:focus {
 /* =============================================================================
  *   Primary, Secondary and Menu Bar region menus
  * ========================================================================== */
-/* line 128, ../sass/lambeth-global.scss */
+/* line 131, ../sass/lambeth-global.scss */
 #primary-menu-bar {
   display: inline-block;
 }
@@ -202,23 +205,23 @@ a:hover, a:focus {
  *  - #secondary-menu (secondary/user menu)
  * You can target all of these with .nav or div[id$="menu-bar"]
  */
-/* line 140, ../sass/lambeth-global.scss */
+/* line 143, ../sass/lambeth-global.scss */
 #menu-bar.nav {
-  float: left;
+  float: none;
   vertical-align: top;
-  margin: 0;
+  margin-top: 10px;
   border-color: #efeae4;
   -webkit-box-shadow: #efeae4 -1px 0px 0px;
   -moz-box-shadow: #efeae4 -1px 0px 0px;
   box-shadow: #efeae4 -1px 0px 0px;
 }
-/* line 149, ../sass/lambeth-global.scss */
+/* line 152, ../sass/lambeth-global.scss */
 #menu-bar.nav ul,
 #menu-bar.nav ul.menu {
   margin: 0;
   padding: 0;
 }
-/* line 155, ../sass/lambeth-global.scss */
+/* line 158, ../sass/lambeth-global.scss */
 #menu-bar.nav li,
 #menu-bar.nav ul.menu li {
   display: inline-block;
@@ -227,25 +230,25 @@ a:hover, a:focus {
   margin: 0;
   padding: 0;
 }
-/* line 162, ../sass/lambeth-global.scss */
+/* line 165, ../sass/lambeth-global.scss */
 #menu-bar.nav li:hover, #menu-bar.nav li.active-trail,
 #menu-bar.nav ul.menu li:hover,
 #menu-bar.nav ul.menu li.active-trail {
   background: none;
 }
-/* line 165, ../sass/lambeth-global.scss */
+/* line 168, ../sass/lambeth-global.scss */
 #menu-bar.nav li:hover .arrow:before, #menu-bar.nav li.active-trail .arrow:before,
 #menu-bar.nav ul.menu li:hover .arrow:before,
 #menu-bar.nav ul.menu li.active-trail .arrow:before {
   border-color: transparent transparent white transparent;
 }
-/* line 169, ../sass/lambeth-global.scss */
+/* line 172, ../sass/lambeth-global.scss */
 #menu-bar.nav li:hover .arrow:after, #menu-bar.nav li.active-trail .arrow:after,
 #menu-bar.nav ul.menu li:hover .arrow:after,
 #menu-bar.nav ul.menu li.active-trail .arrow:after {
   border-color: transparent transparent white transparent;
 }
-/* line 176, ../sass/lambeth-global.scss */
+/* line 179, ../sass/lambeth-global.scss */
 #menu-bar.nav li a,
 #menu-bar.nav ul.menu li a {
   display: block;
@@ -263,18 +266,18 @@ a:hover, a:focus {
   -moz-box-shadow: #efeae4 -1px 0px 0px;
   box-shadow: #efeae4 -1px 0px 0px;
 }
-/* line 191, ../sass/lambeth-global.scss */
+/* line 194, ../sass/lambeth-global.scss */
 #menu-bar.nav li a:hover, #menu-bar.nav li a:focus,
 #menu-bar.nav ul.menu li a:hover,
 #menu-bar.nav ul.menu li a:focus {
   text-decoration: none;
 }
-/* line 194, ../sass/lambeth-global.scss */
+/* line 197, ../sass/lambeth-global.scss */
 #menu-bar.nav li a.active,
 #menu-bar.nav ul.menu li a.active {
   color: #f8a02b;
 }
-/* line 197, ../sass/lambeth-global.scss */
+/* line 200, ../sass/lambeth-global.scss */
 #menu-bar.nav li a .arrow,
 #menu-bar.nav ul.menu li a .arrow {
   width: 17px;
@@ -284,44 +287,44 @@ a:hover, a:focus {
   bottom: -1px;
   margin: 0 0 0 -8px;
 }
-/* line 207, ../sass/lambeth-global.scss */
+/* line 210, ../sass/lambeth-global.scss */
 #menu-bar.nav .block {
   margin: 0;
 }
-/* line 211, ../sass/lambeth-global.scss */
+/* line 214, ../sass/lambeth-global.scss */
 #menu-bar.nav .main-menu-home a {
   background: url(../images/icons/mil-icon-home-inactive.png) no-repeat center 6px;
 }
-/* line 214, ../sass/lambeth-global.scss */
+/* line 217, ../sass/lambeth-global.scss */
 #menu-bar.nav .main-menu-home a:hover, #menu-bar.nav .main-menu-home a.active-trail {
   background: url(../images/icons/mil-icon-home.png) no-repeat center 6px;
 }
-/* line 219, ../sass/lambeth-global.scss */
+/* line 222, ../sass/lambeth-global.scss */
 #menu-bar.nav .main-menu-projects a {
   background: url(../images/icons/mil-icon-groups-inactive.png) no-repeat center 6px;
 }
-/* line 222, ../sass/lambeth-global.scss */
+/* line 225, ../sass/lambeth-global.scss */
 #menu-bar.nav .main-menu-projects a:hover, #menu-bar.nav .main-menu-projects a.active-trail {
   background: url(../images/icons/mil-icon-groups.png) no-repeat center 6px;
 }
-/* line 227, ../sass/lambeth-global.scss */
+/* line 230, ../sass/lambeth-global.scss */
 #menu-bar.nav .main-menu-events a, #menu-bar.nav .menu-item-896 a {
   background: url(../images/icons/mil-icon-events-inactive.png) no-repeat center 6px;
 }
-/* line 230, ../sass/lambeth-global.scss */
+/* line 233, ../sass/lambeth-global.scss */
 #menu-bar.nav .main-menu-events a:hover, #menu-bar.nav .main-menu-events a.active-trail, #menu-bar.nav .menu-item-896 a:hover, #menu-bar.nav .menu-item-896 a.active-trail {
   background: url(../images/icons/mil-icon-events.png) no-repeat center 6px;
 }
-/* line 235, ../sass/lambeth-global.scss */
+/* line 238, ../sass/lambeth-global.scss */
 #menu-bar.nav .menu-item-874 a {
   background: url(../images/icons/mil-icon-impact-inactive.png) no-repeat center 6px;
 }
-/* line 238, ../sass/lambeth-global.scss */
+/* line 241, ../sass/lambeth-global.scss */
 #menu-bar.nav .menu-item-874 a:hover, #menu-bar.nav .menu-item-874 a.active-trail {
   background: url(../images/icons/mil-icon-impact.png) no-repeat center 6px;
 }
 
-/* line 244, ../sass/lambeth-global.scss */
+/* line 247, ../sass/lambeth-global.scss */
 .selectBox-dropdown {
   color: #f37c30;
 }
@@ -329,22 +332,22 @@ a:hover, a:focus {
 /* =============================================================================
  *   Quicktab Pills
  * ========================================================================== */
-/* line 252, ../sass/lambeth-global.scss */
+/* line 255, ../sass/lambeth-global.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a {
   background-color: #f37c30;
 }
 
-/* line 256, ../sass/lambeth-global.scss */
+/* line 259, ../sass/lambeth-global.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a::after {
   border-color: #f37c30 transparent transparent transparent;
 }
 
-/* line 260, ../sass/lambeth-global.scss */
+/* line 263, ../sass/lambeth-global.scss */
 ul.primary.tabs li.active a, ul.primary.tabs li.active a:hover {
   background-color: #f37c30;
 }
 
-/* line 264, ../sass/lambeth-global.scss */
+/* line 267, ../sass/lambeth-global.scss */
 ul.primary.tabs li a:hover {
   background-color: #f37c30;
   color: #FFF;
@@ -353,7 +356,7 @@ ul.primary.tabs li a:hover {
 /*
  * "Search form" block
  */
-/* line 272, ../sass/lambeth-global.scss */
+/* line 275, ../sass/lambeth-global.scss */
 .block-search {
   display: block;
   background-color: #F37C30;
@@ -374,19 +377,19 @@ ul.primary.tabs li a:hover {
   margin: 0 0 0 10px;
   position: relative;
 }
-/* line 284, ../sass/lambeth-global.scss */
+/* line 287, ../sass/lambeth-global.scss */
 .block-search .block-inner {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 298, ../sass/lambeth-global.scss */
+/* line 291, ../sass/lambeth-global.scss */
 .block-search .form-text {
   color: white;
   background: transparent;
   border: none;
   margin: 3px 0 0 0;
 }
-/* line 305, ../sass/lambeth-global.scss */
+/* line 298, ../sass/lambeth-global.scss */
 .block-search .form-submit {
   background-color: transparent !important;
   border: none !important;
@@ -396,7 +399,7 @@ ul.primary.tabs li a:hover {
   padding: 0 !important;
   margin: 10px 2px !important;
 }
-/* line 315, ../sass/lambeth-global.scss */
+/* line 308, ../sass/lambeth-global.scss */
 .block-search .form-item-search-block-form label {
   position: absolute;
   left: 0px;
@@ -408,42 +411,42 @@ ul.primary.tabs li a:hover {
   display: block;
 }
 
-/* line 327, ../sass/lambeth-global.scss */
+/* line 320, ../sass/lambeth-global.scss */
 #header a {
   color: #f37c30;
 }
 
-/* line 331, ../sass/lambeth-global.scss */
+/* line 324, ../sass/lambeth-global.scss */
 body.front.not-logged-in #block-system-main .region-conditional-stack .panel-pane {
   width: 50%;
 }
 
-/* line 335, ../sass/lambeth-global.scss */
+/* line 328, ../sass/lambeth-global.scss */
 body.front.not-logged-in #block-system-main .pane-1 {
   float: none;
   width: auto;
 }
 
-/* line 340, ../sass/lambeth-global.scss */
+/* line 333, ../sass/lambeth-global.scss */
 body.front.not-logged-in #block-system-main .pane-1 .pane-title {
   font-weight: normal;
   font-size: 20px;
   color: #666;
 }
 
-/* line 346, ../sass/lambeth-global.scss */
+/* line 339, ../sass/lambeth-global.scss */
 .block-search .selectBox-dropdown .selectBox-label {
   color: #FFF;
 }
 
 /* Custom pane style */
-/* line 357, ../sass/lambeth-global.scss */
+/* line 350, ../sass/lambeth-global.scss */
 .panel-style h2 {
   font-size: 20px;
   color: #666666;
 }
 
-/* line 363, ../sass/lambeth-global.scss */
+/* line 356, ../sass/lambeth-global.scss */
 #panels-ipe-regionid-two_66_33_first .panel-style {
   margin-left: 10px;
   margin-right: 30px;
@@ -451,31 +454,33 @@ body.front.not-logged-in #block-system-main .pane-1 .pane-title {
 
 /* Update button sty;es */
 /* Remove background image */
-/* line 383, ../sass/lambeth-global.scss */
+/* line 376, ../sass/lambeth-global.scss */
 .front.not-logged-in #content {
   background: none;
 }
 
-/* line 387, ../sass/lambeth-global.scss */
+/* line 380, ../sass/lambeth-global.scss */
 .page-node .node-content {
   padding: 0 20px;
   margin-left: 0px;
 }
 
-/* line 392, ../sass/lambeth-global.scss */
+/* line 385, ../sass/lambeth-global.scss */
 h3 {
   color: #c83f32;
 }
 
 /* Footer Building blocks */
-/* line 397, ../sass/lambeth-global.scss */
+/* line 390, ../sass/lambeth-global.scss */
 .build-block {
-  width: 12.5%;
-  background: #c83f32;
+  width: 10%;
+  height: 80px;
+  background: #f37c30;
+  float: left;
+  margin-right: 2.5%;
 }
 
-/* line 402, ../sass/lambeth-global.scss */
+/* line 398, ../sass/lambeth-global.scss */
 .bb-red {
-  width: 12.5%;
-  background-color: #f37c30;
+  background-color: #c83f32;
 }
